@@ -4,7 +4,7 @@ type Token int
 
 const (
 	EOF Token = iota
-	ILLEGAL
+	UNKNOWN
 	WHITESPACE
 	NUMBER
 
@@ -29,7 +29,7 @@ const (
 func (t Token) String() string {
 	return map[Token]string{
 		EOF:             "EOF",
-		ILLEGAL:         "ILLEGAL",
+		UNKNOWN:         "UNKNOWN",
 		WHITESPACE:      "WHITESPACE",
 		NUMBER:          "NUMBER",
 		IDENT:           "IDENT",
