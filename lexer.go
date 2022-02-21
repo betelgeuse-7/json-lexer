@@ -179,7 +179,7 @@ func (l *Lexer) lex() (pos Position, tok Token, lit string) {
 		return l.pos, QUOTATION_MARK, "\""
 	}
 
-	return l.pos, ILLEGAL, ILLEGAL.String()
+	return l.pos, ILLEGAL, string(ch)
 }
 
 // return JSON representation of lexed tokens
@@ -212,5 +212,5 @@ func isWhitespace(ch rune) bool {
 }
 
 func isLetter(ch rune) bool {
-	return unicode.IsLetter(ch) || unicode.IsSymbol(ch) || unicode.IsPunct(ch)
+	return unicode.IsLetter(ch) || unicode.IsSymbol(ch)
 }
