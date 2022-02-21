@@ -1,0 +1,19 @@
+ o==========================o
+{ A simple JSON lexer in Go. }
+ o==========================o
+
+FLAGS
+    -i
+        Specify an input file to lex.
+    -o 
+        Specify the output file.
+
+     If the -i flag is not present, the program will prompt you to enter some json data.
+    It will read until a new line (\n). 
+
+     If the -o flag is absent, the program will yield the results to stdin.
+    
+
+-----------------------
+github.com/betelgeuse-7
+Abidin Durdu
