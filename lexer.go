@@ -179,7 +179,7 @@ func (l *Lexer) lex() (pos Position, tok Token, lit string) {
 		return l.pos, QUOTATION_MARK, "\""
 	}
 
-	return l.pos, ILLEGAL, string(ch)
+	return l.pos, UNKNOWN, string(ch)
 }
 
 // return JSON representation of lexed tokens
