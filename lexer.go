@@ -208,9 +208,9 @@ func (l *Lexer) JSON() ([]byte, error) {
 }
 
 func isWhitespace(ch rune) bool {
-	return ch == ' ' || ch == '\t' || ch == '\n'
+	return unicode.IsSpace(ch)
 }
 
 func isLetter(ch rune) bool {
-	return (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')
+	return unicode.IsLetter(ch) || unicode.IsSymbol(ch) || unicode.IsPunct(ch)
 }
